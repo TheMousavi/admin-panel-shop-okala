@@ -19,7 +19,7 @@ $(document).ready(function () {
             $('#sidebar-toggle-show').removeClass('d-none');
 
         }, 300)
-    })
+    });
 
 
     $('#sidebar-toggle-show').click(function () {
@@ -30,9 +30,26 @@ $(document).ready(function () {
             $('#sidebar-toggle-show').addClass('d-none');
 
         }, 300)
-    })
+    });
 
     $('#menu-toggle').click(function () {
         $('#body-header').toggle(300);
-    })
+    });
+
+    $('#search-toogle').click(function () {
+        $('#search-toogle').removeClass('d-md-inline');
+        $('#search-area').addClass('d-md-inline');
+        $('#search-input').animate({width:"12rem"} , 300);
+
+    });
+
+    $('#search-area-hide').click(function () {
+        $('#search-input').animate({width : "0"} , 300);
+        setTimeout(function () {
+            $('#search-toogle').addClass('d-md-inline');
+            $('#search-area').removeClass('d-md-inline');
+        },300);
+
+    });
+
 })
